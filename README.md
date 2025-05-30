@@ -52,9 +52,12 @@ The model helps classify tumors as **Malignant** or **Benign** based on input fe
 
 ## 🔍 Model Inference on New Data
 
-* Applied the trained model on a new test dataset using the **same preprocessing pipeline**.
-* Predictions were visualized and results stored appropriately.
-
+* The trained **Logistic Regression** model and the **StandardScaler** were saved using the `pickle` module for future use.
+* During inference, both the model and scaler were loaded using `pickle.load()`, ensuring consistency in preprocessing.
+* The new input data was scaled using the same `StandardScaler` from training.
+* Predictions were then generated using the reloaded model.
+* Final outputs, including predicted labels were visualized and saved for analysis.
+* 
 ---
 
 ## 🧠 Technologies Used
@@ -65,6 +68,7 @@ The model helps classify tumors as **Malignant** or **Benign** based on input fe
 * numpy
 * matplotlib / seaborn
 * Jupyter Notebook
+* pickle
 
 ---
 
